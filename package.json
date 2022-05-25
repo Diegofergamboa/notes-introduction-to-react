@@ -1,0 +1,19 @@
+{
+  "name": "todolistapp",
+  "version": "1.0.0",
+  "description": "Todo list App using ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diegofergamboa/todoListApp.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Diegofergamboa/todoListApp/issues"
+  },
+  "homepage": "https://github.com/Diegofergamboa/todoListApp#readme"
+}
