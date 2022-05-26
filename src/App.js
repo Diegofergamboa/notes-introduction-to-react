@@ -1,6 +1,10 @@
 import React from "react";
 import { TodoCounter } from "./TodoCounter";
-// import './App.css';
+import { TodoSearch } from "./TodoSearch";
+import { TodoList } from "./TodoList";
+import { TodoItem } from "./TodoItem";
+import { TodoUser } from "./TodoUser";
+import { TodoCreateButton } from "./TodoCreateButton";
 
 const defaultToDos = [
   {text : 'Primera tarea' , completed : true} ,
@@ -13,18 +17,15 @@ const defaultToDos = [
 function App() {
   return (
     <React.Fragment>
-
+      <TodoUser />
       <TodoCounter />
-      {/* <TodoSearch />
-        <input placeholder='Search your tas to do'/>
+      <TodoSearch />
       <TodoList>
         {defaultToDos.map(todo => (
-          <TodoItem/>
-          ))}
-      </TodoList> ,
+          <TodoItem key={defaultToDos.text} text={todo.text}/>
+        ))}
+      </TodoList>
       <TodoCreateButton/>
-      <button>+</button> */}
-
     </React.Fragment>
   );
 }
