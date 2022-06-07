@@ -1,0 +1,34 @@
+.TodoUser {
+    width: 320px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #3a4e93;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+.TodoUser h1 {
+    font-size: 16px;
+}
+
+.TodoUser section {
+    display: flex;
+    flex-direction: column;
+}
+
+.TodoUser img {
+    margin-top: 3px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.TodoUser button {
+    background-color: transparent;
+    border: none;
+    font-size: 8px;
+    color: blue;
+    text-decoration-line: underline;
+}

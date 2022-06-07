@@ -1,6 +1,10 @@
-.App {
+body {
   display: flex;
   place-content: center;
   place-items: center;
+}
+
+.Body-app {
+  width: 100px;
   background-color: black;
 }

@@ -17,7 +17,7 @@ const defaultToDos = [
 
 function App() {
   return (
-    <React.Fragment>
+    <React.Fragment className="Body-app">
       <TodoUser />
       <TodoCounter />
       <TodoSearch />
