@@ -1,0 +1,15 @@
+/* Styling */
+
+.TodoCreateButton {
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 100%;
+    background-color: #5c58b6;
+}
+
+.TodoCreateButton:hover {
+    transform: rotate(-130deg);
+    cursor: pointer;
+    opacity: 0.70;
+}
