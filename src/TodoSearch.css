@@ -1,0 +1,12 @@
+
+.TodoSearchButton {
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    width: 190px;
+    height: 30px;
+    background-color: #5c58b6;
+    color: black;
+}

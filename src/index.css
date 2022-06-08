@@ -8,4 +8,10 @@ body {
     margin: 0 24px;
     position: relative;
     min-height: 100vh;
+    background-color: #dfdfe257;
+    border-radius: 5px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
