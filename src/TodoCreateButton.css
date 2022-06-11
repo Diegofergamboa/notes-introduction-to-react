@@ -6,6 +6,8 @@
     border: none;
     border-radius: 100%;
     background-color: #5c58b6;
+    color: white;
+    font-size: 20px;
 }
 
 .TodoCreateButton:hover {
