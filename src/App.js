@@ -16,11 +16,17 @@ const defaultToDos = [
 
 
 function App() {
+  const [searchValue, setSearchValue] = React.useState('');
+
   return (
-    <React.Fragment className="Body-app">
+
+    <React.Fragment>
       <TodoUser />
       <TodoCounter />
-      <TodoSearch />
+      <TodoSearch 
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
       <TodoList>
         {defaultToDos.map(todo => (
           <TodoItem key={defaultToDos.text} text={todo.text}/>
