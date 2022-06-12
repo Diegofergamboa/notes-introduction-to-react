@@ -3,9 +3,10 @@ import './TodoSearch.css';
 
 function TodoSearch ( {searchValue , setSearchValue} )  {
     
-    // const settingValue = (searchValue) => {
-    //     searchValue == 0 ? searchValue : setSearchValue
-    // };
+    const settingValue = (event) => {
+        console.log(event.target.value);
+        setSearchValue(event.target.value);
+    };
     
 
     return (
@@ -13,7 +14,7 @@ function TodoSearch ( {searchValue , setSearchValue} )  {
         className="TodoSearchButton" 
         placeholder='Search your tasks to do'
         value={searchValue}
-        onChange={searchValue}
+        onChange={settingValue}
         />
     );
 };

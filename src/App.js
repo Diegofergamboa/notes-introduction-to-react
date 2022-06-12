@@ -16,7 +16,11 @@ const defaultToDos = [
 
 
 function App() {
+  const [todos, setTodos] = React.useState(defaultToDos);
   const [searchValue, setSearchValue] = React.useState('');
+  
+  // searcherToDos.
+
 
   return (
 
@@ -28,8 +32,8 @@ function App() {
         setSearchValue={setSearchValue}
       />
       <TodoList>
-        {defaultToDos.map(todo => (
-          <TodoItem key={defaultToDos.text} text={todo.text}/>
+        {searchedTodos.map(todo => (
+          <TodoItem key={todos.text} text={todo.text}/>
         ))}
       </TodoList>
       <TodoCreateButton/>
