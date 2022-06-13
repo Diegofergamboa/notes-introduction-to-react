@@ -14,13 +14,24 @@ const defaultToDos = [
   {text : 'Cuarta tarea' , completed : false} ,
 ];
 
-
+ 
 function App() {
   const [todos, setTodos] = React.useState(defaultToDos);
   const [searchValue, setSearchValue] = React.useState('');
   
   // searcherToDos.
+  let searchedTodos = [];
 
+  if (searchValue < 1) { 
+    searchedTodos = todos;
+  } else {
+    searchedTodos = todos.filter(todo => {
+      const todoText = todo.text.toLowerCase();
+      const searchText = searchValue.toLowerCase();
+      return searchedTodos = todoText.includes(searchText);
+    })
+  }
+  
 
   return (
 
@@ -33,7 +44,7 @@ function App() {
       />
       <TodoList>
         {searchedTodos.map(todo => (
-          <TodoItem key={todos.text} text={todo.text}/>
+          <TodoItem key={todo.text} text={todo.text}/>
         ))}
       </TodoList>
       <TodoCreateButton/>
