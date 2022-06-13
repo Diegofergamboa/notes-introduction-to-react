@@ -14,7 +14,6 @@
     border-radius: 100%;
     top: 8px;
     border: none;
-    color: antiquewhite;
     background-color: #5c58b6;
     font-weight: 100;
 }
@@ -31,8 +30,17 @@
 
 .FinishTaskButton {
     left: 314px;
+    color: antiquewhite;
 }
 
 .OverTaskButton--Active {
+    color: green;
+}
+
+.OverTaskButton {
+    color: antiquewhite;
+}
+
+.TaskTextCompleted {
     text-decoration: line-through;
 }
