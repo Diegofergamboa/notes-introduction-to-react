@@ -11,10 +11,10 @@ const defaultToDos = [
   {text : 'Primera tarea' , completed : true} ,
   {text : 'Segunda tarea' , completed : false} ,
   {text : 'Tercera tarea' , completed : true} ,
-  {text : 'Cuarta tarea' , completed : false} ,
+  {text : 'Cuarta tarea' , completed : true} ,
 ];
 
- 
+
 function App() {
   const [todos, setTodos] = React.useState(defaultToDos);
   const [searchValue, setSearchValue] = React.useState('');
@@ -30,14 +30,24 @@ function App() {
       const searchText = searchValue.toLowerCase();
       return searchedTodos = todoText.includes(searchText);
     })
-  }
-  
+  };
+
+  // countingToDos.
+  let totalTodos = searchedTodos.length;
+  let todosCompleted = 0;
+  searchedTodos.forEach(todo => {
+    if (todo.completed) {return todosCompleted += 1 }
+  });
+    
 
   return (
 
     <React.Fragment>
       <TodoUser />
-      <TodoCounter />
+      <TodoCounter 
+        totalTodos={totalTodos}
+        todosCompleted={todosCompleted}
+      />
       <TodoSearch 
         searchValue={searchValue}
         setSearchValue={setSearchValue}
@@ -49,6 +59,7 @@ function App() {
       </TodoList>
       <TodoCreateButton/>
     </React.Fragment>
+
   );
 }
 
