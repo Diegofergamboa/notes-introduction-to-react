@@ -8,10 +8,10 @@ import { TodoUser } from "./TodoUser";
 import { TodoCreateButton } from "./TodoCreateButton";
 
 const defaultToDos = [
-  {text : 'Primera tarea' , completed : true} ,
+  {text : 'Primera tarea' , completed : false} ,
   {text : 'Segunda tarea' , completed : false} ,
-  {text : 'Tercera tarea' , completed : true} ,
-  {text : 'Cuarta tarea' , completed : true} ,
+  {text : 'Tercera tarea' , completed : false} ,
+  {text : 'Cuarta tarea' , completed : false} ,
 ];
 
 
@@ -42,16 +42,19 @@ function App() {
 
   // Complete ToDos.
   const completeTodo = (text) => {
-    const indexTodo = todos.findIndex(todo => todo.text == text);
-    return todos[indexTodo].completed = true;
+    const indexTodo = todos.findIndex(todo => todo.text === text);
+    const newTodos = [...todos];
+    newTodos[indexTodo].completed = true;
+    return setTodos[newTodos];
   };
 
   // Delete ToDos.
   const deleteTodo = (text) => {
-    const indexTodo = todos.findIndex(todo => todo.text == text);
-    const newTodos = todos.splice(indexTodo, 1);
-    setTodos(newTodos);
-  };  
+    const indexTodo = todos.findIndex(todo => todo.text === text);
+    const newTodos = [...todos];
+    newTodos.splice(indexTodo, 1);
+    return setTodos(newTodos)
+  };
 
   return (
 
@@ -71,8 +74,8 @@ function App() {
             key={todo.text}
             text={todo.text}
             completed={todo.completed}
-            completeTodo={() => completeTodo}
-            deleteTodo={() => deleteTodo}
+            completeTodo={() => completeTodo(todo.text)}
+            deleteTodo={() => deleteTodo(todo.text)}
           />
         ))}
       </TodoList>
