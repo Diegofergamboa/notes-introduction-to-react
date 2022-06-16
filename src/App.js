@@ -16,6 +16,7 @@ const defaultToDos = [
 
 
 function App() {
+
   const [todos, setTodos] = React.useState(defaultToDos);
   const [searchValue, setSearchValue] = React.useState('');
   
@@ -33,12 +34,24 @@ function App() {
   };
 
   // countingToDos.
-  let totalTodos = searchedTodos.length;
+  let totalTodos = todos.length;
   let todosCompleted = 0;
-  searchedTodos.forEach(todo => {
+  todos.forEach(todo => {
     if (todo.completed) {return todosCompleted += 1 }
   });
-    
+
+  // Complete ToDos.
+  const completeTodo = (text) => {
+    const indexTodo = todos.findIndex(todo => todo.text == text);
+    return todos[indexTodo].completed = true;
+  };
+
+  // Delete ToDos.
+  const deleteTodo = (text) => {
+    const indexTodo = todos.findIndex(todo => todo.text == text);
+    const newTodos = todos.splice(indexTodo, 1);
+    setTodos(newTodos);
+  };  
 
   return (
 
@@ -54,7 +67,13 @@ function App() {
       />
       <TodoList>
         {searchedTodos.map(todo => (
-          <TodoItem key={todo.text} text={todo.text}/>
+          <TodoItem 
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
+            completeTodo={() => completeTodo}
+            deleteTodo={() => deleteTodo}
+          />
         ))}
       </TodoList>
       <TodoCreateButton/>
