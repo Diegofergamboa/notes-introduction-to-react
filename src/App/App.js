@@ -1,11 +1,11 @@
 import React from "react";
 import './App.css';
-import { TodoCounter } from "./TodoCounter";
-import { TodoSearch } from "./TodoSearch";
-import { TodoList } from "./TodoList";
-import { TodoItem } from "./TodoItem";
-import { TodoUser } from "./TodoUser";
-import { TodoCreateButton } from "./TodoCreateButton";
+import { TodoCounter } from "../TodoCounter/TodoCounter";
+import { TodoSearch } from "../TodoSearch/TodoSearch";
+import { TodoList } from "../TodoList/TodoList";
+import { TodoItem } from "../TodoItem/TodoItem";
+import { TodoUser } from "../TodoUser/TodoUser";
+import { TodoCreateButton } from "../TodoCreateButton/TodoCreateButton";
 
 const defaultToDos = [
   {text : 'Primera tarea' , completed : false} ,
