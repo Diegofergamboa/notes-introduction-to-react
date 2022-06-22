@@ -32,7 +32,7 @@ function AppUI({
                     key={todo.text}
                     text={todo.text}
                     completed={todo.completed}
-                    completeTodo={() => completeTodo(todo.text)}
+                    todosCompleted={() => todosCompleted(todo.text)}
                     deleteTodo={() => deleteTodo(todo.text)}
                 />
                 ))}
