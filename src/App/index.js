@@ -73,7 +73,8 @@ function App() {
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   };
-  
+
+
   return (
     <AppUI 
       totalTodos={totalTodos}
